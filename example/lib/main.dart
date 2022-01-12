@@ -7,6 +7,7 @@ import 'package:zendesk_null_safety/zendesk_null_safety.dart';
 void main() => runApp(new MyApp());
 
 const ZendeskAccountKey = '<KEY HERE>';
+const ZendeskAppId = '<KEY HERE>';
 
 class MyApp extends StatefulWidget {
   @override
@@ -24,7 +25,7 @@ class _MyAppState extends State<MyApp> {
 
   // Zendesk is asynchronous, so we initialize in an async method.
   Future<void> initZendesk() async {
-    zendesk.init(ZendeskAccountKey).then((r) {
+    zendesk .init(ZendeskAccountKey, ZendeskAppId, "1234").then((r) {
       print('init finished');
     }).catchError((e) {
       print('failed with error $e');

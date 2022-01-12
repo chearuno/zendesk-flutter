@@ -27,7 +27,8 @@
 }
 
 - (void)initialize:(nonnull InitializeRequest *)input error:(FlutterError * _Nullable __autoreleasing * _Nonnull)error {
-    [ZDKChat initializeWithAccountKey:input.accountKey queue:dispatch_get_main_queue()];
+        [ZDKChat initializeWithAccountKey:input.accountKey appId:input.appId queue:dispatch_get_main_queue()];
+        [ZDKChat registerPushToken:input.deviceToken];
 }
 
 - (void)setDepartment:(nonnull SetDepartmentRequest *)input error:(FlutterError * _Nullable __autoreleasing * _Nonnull)error {

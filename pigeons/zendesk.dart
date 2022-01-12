@@ -3,6 +3,7 @@ import 'package:pigeon/pigeon.dart';
 class InitializeRequest {
   String? accountKey;
   String? appId;
+  String? deviceToken;
 }
 
 class SetDepartmentRequest {
@@ -34,7 +35,7 @@ class SetVisitorInfoRequest {
 }
 
 class VisitorTagsRequest {
-  List<String>? tags;
+  List<String?>? tags;
 }
 
 class VisitorNoteRequest {
